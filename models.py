@@ -81,8 +81,8 @@ class Comment(db.Model):
     date = db.Column(db.DateTime())
     post_id = db.Column(db.String(45), db.ForeignKey('posts.id'))
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
+        self.id = str(uuid4())
 
     def __repr__(self):
         return '<Model Comment {} >'.format(self.name)

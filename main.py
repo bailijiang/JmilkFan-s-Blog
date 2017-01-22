@@ -1,6 +1,6 @@
 from flask import Flask
 from config import DevConfig
-import wt_forms
+import forms
 
 app = Flask(__name__)
 

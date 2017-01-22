@@ -3,6 +3,8 @@ from sqlalchemy import func
 
 from main import app
 from models import db, User, Post, Tag, Comment, posts_tags
+import datetime
+from forms import CommentForm
 
 def sidebar_data():
     # Get post recent
@@ -29,8 +31,20 @@ def home(page=1):
                            recent=recent,
                            top_tags=top_tags)
 
-@app.route('/post/<string:post_id>')
+@app.route('/post/<string:post_id>', methods=('GET', 'POST'))
 def post(post_id):
+
+    form = CommentForm()
+    # When the HTTP request is POST
+    if form.validate_on_submit():
+        new_comment = Comment()
+        new_comment.name = form.name.data
+        new_comment.text = form.text.data
+        new_comment.date = datetime.datetime.now()
+        new_comment.post_id = post_id
+        db.session.add(new_comment)
+        db.session.commit()
+
     post = Post.query.get_or_404(post_id)
     tags = post.tags
     comments = post.comments.order_by(Comment.date.desc()).all()
@@ -40,6 +54,7 @@ def post(post_id):
                            post=post,
                            tags=tags,
                            comments=comments,
+                           form=form,
                            recent=recent,
                            top_tags=top_tags)
 
