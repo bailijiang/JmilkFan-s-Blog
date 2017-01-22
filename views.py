@@ -22,16 +22,16 @@ def sidebar_data():
 def home(page=1):
     posts = Post.query.order_by(Post.publish_date.desc()).paginate(page, 10)
 
-    recent, top_tages = sidebar_data()
+    recent, top_tags = sidebar_data()
 
     return render_template('home.html',
                            posts=posts,
                            recent=recent,
-                           tog_tags=top_tages)
+                           tog_tags=top_tags)
 
 @app.route('/post/<string:post_id>')
 def post(post_id):
-    post = db.session.query(Post).get_or_404(post_id)
+    post = Post.query.get_or_404(post_id)
     tags = post.tags
     comments = post.comments.order_by(Comment.date.desc()).all()
     recent, top_tags = sidebar_data()

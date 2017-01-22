@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from main import app
+from uuid import uuid4
 
 db = SQLAlchemy(app)
 
@@ -54,6 +55,7 @@ class Post(db.Model):
     )
 
     def __init__(self, title):
+        self.id = str(uuid4())
         self.title = title
 
     def __repr__(self):
@@ -65,6 +67,7 @@ class Tag(db.Model):
     name = db.Column(db.String(255))
 
     def __init__(self, name):
+        self.id = str(uuid4())
         self.name = name
 
     def __repr__(self):
