@@ -20,14 +20,14 @@ def sidebar_data():
 @app.route('/')
 @app.route('/<int:page>')
 def home(page=1):
-    posts = Post.query.order_by(Post.publish_date.desc()).paginate(page, 10)
+    posts = Post.query.order_by(Post.publish_date.desc()).paginate(page, 5)
 
     recent, top_tags = sidebar_data()
 
     return render_template('home.html',
                            posts=posts,
                            recent=recent,
-                           tog_tags=top_tags)
+                           top_tags=top_tags)
 
 @app.route('/post/<string:post_id>')
 def post(post_id):
@@ -45,7 +45,7 @@ def post(post_id):
 
 @app.route('/tag/<string:tag_name>')
 def tag(tag_name):
-    tag = db.session.query(Tag).filter_by(title=tag_name).first_or_404()    # title or name ?
+    tag = Tag.query.filter_by(name=tag_name).first_or_404()
     posts = tag.posts.order_by(Post.publish_date.desc()).all()
     recent, top_tags = sidebar_data()
 
