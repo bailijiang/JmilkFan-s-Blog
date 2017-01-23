@@ -1,6 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 # from jmilkfansblog import app
 from uuid import uuid4
+from jmilkfansblog.extensions import bcrypt
+
 
 db = SQLAlchemy()
 
@@ -22,11 +24,17 @@ class User(db.Model):
     def __init__(self, id, username, password):
         self.id = id
         self.username = username
-        self.password = password
+        self.password = self.set_password(password)
 
     def __repr__(self):
         """Define the string format for instance of User."""
         return "<Model User `{}`>".format(self.username)
+
+    def set_password(self, password):
+        return bcrypt.generate_password_hash(password)
+
+    def check_password(self, password):
+        return bcrypt.check_password_hash(self.password, password)
 
 posts_tags = db.Table('posts_tags',
                       db.Column('post_id', db.String(45), db.ForeignKey('posts.id')),
