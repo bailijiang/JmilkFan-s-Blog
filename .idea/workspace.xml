@@ -2,11 +2,395 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b132d2-250e-4013-a50b-d27a82b5b290" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/post.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wt_forms.py" afterPath="$PROJECT_DIR$/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views.py" afterPath="$PROJECT_DIR$/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmilkfansblog/controllers/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmilkfansblog/templates/blog/page_not_found.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmilkfansblog/templates/blog/tag.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/jmilkfansblog/config.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/forms.py" afterPath="$PROJECT_DIR$/jmilkfansblog/forms.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/jmilkfansblog/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/jmilkfansblog/models.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/.editorconfig" afterPath="$PROJECT_DIR$/jmilkfansblog/static/.editorconfig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/.gitattributes" afterPath="$PROJECT_DIR$/jmilkfansblog/static/.gitattributes" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/.gitignore" afterPath="$PROJECT_DIR$/jmilkfansblog/static/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/.hound.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/.hound.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/.travis.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/.travis.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CHANGELOG.md" afterPath="$PROJECT_DIR$/jmilkfansblog/static/CHANGELOG.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CNAME" afterPath="$PROJECT_DIR$/jmilkfansblog/static/CNAME" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/jmilkfansblog/static/CONTRIBUTING.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/Gemfile" afterPath="$PROJECT_DIR$/jmilkfansblog/static/Gemfile" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/Gemfile.lock" afterPath="$PROJECT_DIR$/jmilkfansblog/static/Gemfile.lock" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/Gruntfile.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/Gruntfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/jmilkfansblog/static/ISSUE_TEMPLATE.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/LICENSE" afterPath="$PROJECT_DIR$/jmilkfansblog/static/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/README.md" afterPath="$PROJECT_DIR$/jmilkfansblog/static/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/_config.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/_config.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/bower.json" afterPath="$PROJECT_DIR$/jmilkfansblog/static/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/composer.json" afterPath="$PROJECT_DIR$/jmilkfansblog/static/composer.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap-theme.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap-theme.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/css/bootstrap.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/js/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/dist/js/npm.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/dist/js/npm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/LICENSE" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/browser-bugs.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/browser-bugs.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/browser-features.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/browser-features.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/core-team.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/core-team.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/glyphicons.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/glyphicons.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/sass-team.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/sass-team.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/showcase.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/showcase.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_data/translations.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_data/translations.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/ads.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/ads.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/alerts.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/alerts.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/badges.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/badges.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/breadcrumbs.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/breadcrumbs.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/button-dropdowns.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/button-dropdowns.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/button-groups.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/button-groups.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/dropdowns.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/dropdowns.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/glyphicons.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/glyphicons.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/input-groups.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/input-groups.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/jumbotron.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/jumbotron.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/labels.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/labels.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/list-group.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/list-group.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/media.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/media.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/navbar.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/navbar.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/navs.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/navs.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/page-header.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/page-header.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/pagination.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/pagination.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/panels.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/panels.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/progress-bars.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/progress-bars.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/responsive-embed.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/responsive-embed.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/thumbnails.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/thumbnails.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/components/wells.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/components/wells.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/buttons.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/buttons.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/code.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/code.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/forms.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/forms.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/grid.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/grid.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/helpers.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/helpers.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/images.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/images.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/less.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/less.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/overview.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/overview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/responsive-utilities.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/responsive-utilities.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/sass.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/sass.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/tables.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/tables.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/css/type.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/css/type.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/customizer-variables.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/customizer-variables.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/footer.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/accessibility.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/accessibility.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/browser-device-support.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/browser-device-support.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/community.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/community.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/disabling-responsiveness.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/disabling-responsiveness.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/download.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/download.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/examples.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/examples.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/grunt.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/grunt.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/license.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/license.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/template.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/template.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/third-party-support.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/third-party-support.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/tools.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/tools.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/translations.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/translations.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/getting-started/whats-included.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/getting-started/whats-included.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/header.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/header.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/affix.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/affix.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/alerts.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/alerts.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/buttons.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/buttons.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/carousel.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/carousel.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/collapse.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/collapse.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/dropdowns.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/dropdowns.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/modal.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/modal.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/overview.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/overview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/popovers.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/popovers.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/scrollspy.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/scrollspy.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/tabs.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/tabs.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/tooltips.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/tooltips.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/js/transitions.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/js/transitions.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/about.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/about.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/components.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/components.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/css.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/css.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/customize.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/customize.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/getting-started.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/getting-started.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/javascript.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/javascript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/main.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/main.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_includes/nav/migration.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_includes/nav/migration.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_layouts/default.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_layouts/default.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_layouts/home.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_layouts/home.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_plugins/bridge.rb" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_plugins/bridge.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_plugins/bugify.rb" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_plugins/bugify.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_pug/customizer-nav.pug" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_pug/customizer-nav.pug" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/_pug/customizer-variables.pug" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/_pug/customizer-variables.pug" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/about.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/about.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/apple-touch-icon.png" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/apple-touch-icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/brand/bootstrap-outline.svg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/brand/bootstrap-outline.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/brand/bootstrap-punchout.svg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/brand/bootstrap-punchout.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/brand/bootstrap-solid.svg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/brand/bootstrap-solid.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/css/docs.min.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/css/docs.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/css/docs.min.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/css/docs.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/css/ie10-viewport-bug-workaround.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/css/ie10-viewport-bug-workaround.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/css/src/docs.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/css/src/docs.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/css/src/pygments-manni.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/css/src/pygments-manni.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/flash/ZeroClipboard.swf" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/flash/ZeroClipboard.swf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/components.png" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/components.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/devices.png" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/devices.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/expo-lyft.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/expo-lyft.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/expo-newsweek.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/expo-newsweek.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/expo-riot.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/expo-riot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/expo-vogue.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/expo-vogue.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/img/sass-less.png" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/img/sass-less.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/customize.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/customize.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/docs.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/docs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/ie-emulation-modes-warning.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/ie-emulation-modes-warning.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/ie10-viewport-bug-workaround.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/ie10-viewport-bug-workaround.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/ie8-responsive-file-warning.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/ie8-responsive-file-warning.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/raw-files.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/raw-files.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/src/application.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/src/application.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/src/customizer.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/src/customizer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/Blob.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/Blob.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/FileSaver.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/FileSaver.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/ZeroClipboard.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/ZeroClipboard.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/anchor.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/anchor.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/autoprefixer.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/autoprefixer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/holder.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/holder.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/jquery.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/jszip.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/jszip.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/less.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/less.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/assets/js/vendor/uglify.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/assets/js/vendor/uglify.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/browser-bugs.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/browser-bugs.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/components.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/components.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/css.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/css.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/customize.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/customize.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap-theme.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap-theme.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/css/bootstrap.min.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/js/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/dist/js/npm.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/dist/js/npm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/blog/blog.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/blog/blog.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/blog/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/blog/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/carousel/carousel.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/carousel/carousel.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/carousel/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/carousel/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/cover/cover.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/cover/cover.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/cover/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/cover/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/dashboard/dashboard.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/dashboard/dashboard.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/dashboard/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/dashboard/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/grid/grid.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/grid/grid.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/grid/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/grid/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/jumbotron-narrow/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/jumbotron-narrow/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/jumbotron-narrow/jumbotron-narrow.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/jumbotron-narrow/jumbotron-narrow.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/jumbotron/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/jumbotron/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/jumbotron/jumbotron.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/jumbotron/jumbotron.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/justified-nav/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/justified-nav/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/justified-nav/justified-nav.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/justified-nav/justified-nav.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/navbar-fixed-top/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/navbar-fixed-top/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/navbar-fixed-top/navbar-fixed-top.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/navbar-fixed-top/navbar-fixed-top.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/navbar-static-top/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/navbar-static-top/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/navbar-static-top/navbar-static-top.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/navbar-static-top/navbar-static-top.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/navbar/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/navbar/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/navbar/navbar.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/navbar/navbar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/non-responsive/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/non-responsive/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/non-responsive/non-responsive.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/non-responsive/non-responsive.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/offcanvas/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/offcanvas/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/offcanvas/offcanvas.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/offcanvas/offcanvas.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/offcanvas/offcanvas.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/offcanvas/offcanvas.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/blog.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/blog.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/carousel.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/carousel.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/cover.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/cover.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/dashboard.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/dashboard.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/equal-height-columns.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/equal-height-columns.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/grid.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/grid.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/jumbotron-narrow.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/jumbotron-narrow.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/jumbotron.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/jumbotron.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/justified-nav.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/justified-nav.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/navbar-fixed.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/navbar-fixed.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/navbar-static.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/navbar-static.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/navbar.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/navbar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/non-responsive.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/non-responsive.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/offcanvas.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/offcanvas.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/sign-in.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/sign-in.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/starter-template.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/starter-template.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/sticky-footer-navbar.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/sticky-footer-navbar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/sticky-footer.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/sticky-footer.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/screenshots/theme.jpg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/screenshots/theme.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/signin/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/signin/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/signin/signin.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/signin/signin.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/starter-template/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/starter-template/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/starter-template/starter-template.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/starter-template/starter-template.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/sticky-footer-navbar/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/sticky-footer-navbar/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/sticky-footer/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/sticky-footer/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/sticky-footer/sticky-footer.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/sticky-footer/sticky-footer.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/theme/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/theme/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/theme/theme.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/theme/theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/tooltip-viewport/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/tooltip-viewport/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/tooltip-viewport/tooltip-viewport.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/tooltip-viewport/tooltip-viewport.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/examples/tooltip-viewport/tooltip-viewport.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/examples/tooltip-viewport/tooltip-viewport.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/favicon.ico" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/getting-started.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/getting-started.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/javascript.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/javascript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/migration.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/migration.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/docs/robots.txt" afterPath="$PROJECT_DIR$/jmilkfansblog/static/docs/robots.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/jmilkfansblog/static/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/jmilkfansblog/static/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/jmilkfansblog/static/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/jmilkfansblog/static/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/jmilkfansblog/static/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/.jshintrc" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/.jshintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/bs-commonjs-generator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/bs-glyphicons-data-generator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/bs-lessdoc-parser.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/bs-raw-files-generator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/change-version.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/change-version.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/configBridge.json" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/configBridge.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/npm-shrinkwrap.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/jmilkfansblog/static/grunt/sauce_browsers.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/.jscsrc" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/.jscsrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/.jshintrc" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/.jshintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/affix.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/affix.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/alert.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/alert.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/button.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/button.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/carousel.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/collapse.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/collapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/dropdown.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/dropdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/modal.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/modal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/popover.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/popover.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/scrollspy.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/scrollspy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tab.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tab.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/README.md" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/index.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/.jshintrc" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/.jshintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/affix.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/affix.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/alert.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/alert.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/button.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/button.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/carousel.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/collapse.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/collapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/dropdown.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/dropdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/modal.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/modal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/phantom.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/phantom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/popover.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/popover.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/scrollspy.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/scrollspy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/tab.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/tab.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/unit/tooltip.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/unit/tooltip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/vendor/jquery.min.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/vendor/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/vendor/qunit.css" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/vendor/qunit.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/vendor/qunit.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/vendor/qunit.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/affix-with-sticky-footer.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/affix-with-sticky-footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/affix.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/affix.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/alert.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/alert.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/button.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/button.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/carousel.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/carousel.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/collapse.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/collapse.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/dropdown.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/dropdown.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/modal.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/modal.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/popover.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/popover.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/scrollspy.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/scrollspy.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/tab.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/tab.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tests/visual/tooltip.html" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tests/visual/tooltip.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/tooltip.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/tooltip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/transition.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/js/transition.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/.csscomb.json" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/.csscomb.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/.csslintrc" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/.csslintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/alerts.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/alerts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/badges.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/badges.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/bootstrap.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/bootstrap.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/breadcrumbs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/button-groups.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/button-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/buttons.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/carousel.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/carousel.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/close.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/close.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/code.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/code.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/component-animations.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/component-animations.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/dropdowns.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/dropdowns.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/forms.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/glyphicons.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/glyphicons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/grid.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/input-groups.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/input-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/jumbotron.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/jumbotron.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/labels.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/list-group.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/media.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/media.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/alerts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/background-variant.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/border-radius.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/center-block.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/clearfix.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/forms.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/gradients.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/grid-framework.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/grid.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/hide-text.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/image.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/image.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/labels.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/nav-divider.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/nav-vertical-align.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/opacity.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/panels.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/progress-bar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/reset-filter.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/reset-text.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/reset-text.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/resize.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/resize.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/responsive-visibility.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/size.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/size.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/tab-focus.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/table-row.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/text-emphasis.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/text-overflow.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/mixins/vendor-prefixes.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/modals.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/modals.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/navbar.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/navbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/navs.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/navs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/normalize.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/normalize.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/pager.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/pager.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/pagination.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/panels.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/popovers.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/popovers.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/print.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/print.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/progress-bars.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/progress-bars.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/responsive-embed.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/responsive-embed.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/responsive-utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/scaffolding.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/scaffolding.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/tables.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/tables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/theme.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/theme.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/thumbnails.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/thumbnails.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/tooltip.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/tooltip.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/type.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/type.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/utilities.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/variables.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/less/wells.less" afterPath="$PROJECT_DIR$/jmilkfansblog/static/less/wells.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/nuget/MyGet.ps1" afterPath="$PROJECT_DIR$/jmilkfansblog/static/nuget/MyGet.ps1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/nuget/bootstrap.less.nuspec" afterPath="$PROJECT_DIR$/jmilkfansblog/static/nuget/bootstrap.less.nuspec" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/nuget/bootstrap.nuspec" afterPath="$PROJECT_DIR$/jmilkfansblog/static/nuget/bootstrap.nuspec" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/package.js" afterPath="$PROJECT_DIR$/jmilkfansblog/static/package.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/package.json" afterPath="$PROJECT_DIR$/jmilkfansblog/static/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/jmilkfansblog/templates/blog/base.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/jmilkfansblog/templates/blog/home.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/post.html" afterPath="$PROJECT_DIR$/jmilkfansblog/templates/blog/post.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views.py" afterPath="$PROJECT_DIR$/jmilkfansblog/controllers/blog.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fake_data.py" afterPath="$PROJECT_DIR$/fake_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JmilkFan-s-Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,55 +412,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forms.py">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.432282">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.0">
-              <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,7 +426,7 @@
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding>
                 <element signature="e#29#69#0" expanded="true" />
               </folding>
@@ -94,14 +434,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models.py">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3333335">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/tag.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,16 +470,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/wt_forms.py" />
         <option value="$PROJECT_DIR$/fake_data.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/models.py" />
-        <option value="$PROJECT_DIR$/views.py" />
         <option value="$PROJECT_DIR$/templates/post.html" />
+        <option value="$PROJECT_DIR$/views.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/view.py" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/templates/blog/base.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/__init__.py" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/models.py" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/controllers/blog.py" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/templates/blog/page_not_found.html" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/templates/blog/post.html" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/templates/blog/home.html" />
+        <option value="$PROJECT_DIR$/jmilkfansblog/templates/blog/tag.html" />
       </list>
     </option>
   </component>
@@ -170,7 +527,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -199,13 +556,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="jmilkfansblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JmilkFan-s-Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JmilkFan-s-Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jmilkfansblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,6 +598,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jmilkfansblog/controllers" />
+      <recent name="$PROJECT_DIR$/jmilkfansblog" />
+      <recent name="$PROJECT_DIR$/templates/blog" />
     </key>
   </component>
   <component name="RunManager">
@@ -437,12 +821,13 @@
     <frame x="0" y="25" width="1024" height="718" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28739497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25357872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2638037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -450,7 +835,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -474,7 +858,149 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/controllers/blog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#29#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/controllers/blog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#29#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -482,22 +1008,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/controllers/blog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -512,17 +1038,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -530,22 +1054,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/controllers/blog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,17 +1084,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
@@ -578,12 +1100,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -598,13 +1120,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -615,7 +1135,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -623,12 +1143,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -661,90 +1181,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2862191">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#29#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22261484">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41342756">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.2862191">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views.py">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.795053">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4770318">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/controllers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.0">
-          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/controllers/blog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7773852">
+          <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post.html">
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.432282">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state vertical-scroll-proportion="1.903525">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23376623">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/page_not_found.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033395175">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#29#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3333335">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmilkfansblog/templates/blog/tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
