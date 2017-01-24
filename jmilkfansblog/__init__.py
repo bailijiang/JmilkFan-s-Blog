@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for
 
 # from config import DevConfig
-from jmilkfansblog.controllers import blog
+from jmilkfansblog.controllers import blog, main
 from jmilkfansblog.models import db
 from jmilkfansblog.extensions import bcrypt
 
@@ -19,6 +19,7 @@ def create_app(object_name):
         return redirect(url_for('blog.home'))
 
     app.register_blueprint(blog.blog_blueprint)
+    app.register_blueprint(main.main_blueprint)
 
     return app
 
