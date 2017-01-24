@@ -1,4 +1,4 @@
-from flask_wtf import Form
+from flask_wtf import Form, RecaptchaField
 from wtforms import (StringField,
                      TextField,
                      TextAreaField,
@@ -39,6 +39,33 @@ class LoginForm(Form):
             return False
 
         return True
+
+class RegisterForm(Form):
+    """Register Form."""
+
+    username = StringField('Username', [DataRequired(), Length(max=255)])
+    password = PasswordField('Password', [DataRequired(), Length(min=8)])
+    confirm = PasswordField('Confirm Password', [DataRequired(), EqualTo('password')])
+    recaptcha = RecaptchaField()
+
+    def validate(self):
+        check_validate = super(RegisterForm, self).validate()
+
+        # If validator no pass
+        if not check_validate:
+            return False
+
+        # Check the user whether exist
+        user = User.query.filter_by(username=self.username.data).first()
+        if user:
+            self.username.errors.append('User with that name already exists.')
+            return False
+        return True
+
+class PostForm(Form):
+    """Post Form."""
+    title = StringField('Title', [DataRequired(), Length(max=255)])
+    text = TextAreaField('Blog Content', [DataRequired()])
 
 def custom_email(form_object, field_object):
 
