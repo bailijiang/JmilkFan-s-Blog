@@ -62,8 +62,8 @@ class Post(db.Model):
         backref=db.backref('posts', lazy='dynamic')
     )
 
-    def __init__(self, title):
-        self.id = str(uuid4())
+    def __init__(self, id, title):
+        self.id = id
         self.title = title
 
     def __repr__(self):

@@ -1,12 +1,12 @@
 import datetime
 from os import path
-
-from flask import  render_template, Blueprint
+from uuid import uuid4
+from flask import  render_template, Blueprint, redirect, url_for, flash
 
 from sqlalchemy import func
 
 from jmilkfansblog.models import db, User, Post, Tag, Comment, posts_tags
-from jmilkfansblog.forms import CommentForm
+from jmilkfansblog.forms import CommentForm, PostForm
 
 blog_blueprint = Blueprint(
     'blog',
@@ -62,6 +62,8 @@ def post(post_id):
     comments = post.comments.order_by(Comment.date.desc()).all()
     recent, top_tags = sidebar_data()
 
+    # username = db.session.query(User).filter_by(id=post.user_id).first().username
+
     return render_template('post.html',
                            post=post,
                            tags=tags,
@@ -95,6 +97,42 @@ def user(username):
                            posts=posts,
                            recent=recent,
                            top_tags=top_tags)
+
+@blog_blueprint.route('/new', methods=['GET', 'POST'])
+def new_post():
+    form = PostForm()
+    # print("form tttttttttttt", form.title)
+    if form.validate_on_submit():
+        # print("new form on submit ssssssssssssssss")
+
+        new_post = Post(id=str(uuid4()), title=form.title.data)
+        new_post.text = form.text.data
+        new_post.publish_date = datetime.datetime.now()
+
+        db.session.add(new_post)
+        db.session.commit()
+        return redirect(url_for('blog.home'))
+    return render_template('new_post.html', form=form)
+
+@blog_blueprint.route('/edit/<string:id>', methods=['GET', 'POST'])
+def edit_post(id):
+    post = Post.query.get_or_404(id)
+    form = PostForm()
+
+    if form.validate_on_submit():
+        # print("edit form on submit ssssssssssssssss eeeeeeeeeeee")
+        post.title = form.title.data
+        post.text = form.text.data
+        post.publish_date = datetime.datetime.now()
+
+        db.session.add(post)
+        db.session.commit()
+
+        return redirect(url_for('blog.post', post_id=post.id))
+
+    form.title.data = post.title
+    form.text.data = post.text
+    return render_template('edit_post.html', form=form, post=post)
 
 @blog_blueprint.errorhandler(404)
 def page_not_found(error):

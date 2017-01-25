@@ -1,4 +1,4 @@
-from flask_wtf import Form, RecaptchaField
+from flask_wtf import Form, RecaptchaField, FlaskForm
 from wtforms import (StringField,
                      TextField,
                      TextAreaField,
