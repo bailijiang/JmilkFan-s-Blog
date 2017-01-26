@@ -1,10 +1,19 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import AnonymousUserMixin
 # from jmilkfansblog import app
 from uuid import uuid4
 from jmilkfansblog.extensions import bcrypt
 
 
 db = SQLAlchemy()
+
+posts_tags = db.Table('posts_tags',
+                      db.Column('post_id', db.String(45), db.ForeignKey('posts.id')),
+                      db.Column('tag_id', db.String(45), db.ForeignKey('tags.id')))
+
+users_roles = db.Table('users_roles',
+                       db.Column('user_id', db.String(45), db.ForeignKey('users.id')),
+                       db.Column('role_id', db.String(45), db.ForeignKey('roles.id')))
 
 class User(db.Model):
     """Represents Proected users."""
@@ -21,10 +30,20 @@ class User(db.Model):
         lazy='dynamic'
     )
 
+    roles = db.relationship(
+        'Role',
+        secondary = users_roles,
+        backref = db.backref('users', lazy='dynamic'))
+
     def __init__(self, id, username, password):
         self.id = id
         self.username = username
         self.password = self.set_password(password)
+
+        # Setup the default-role for user.
+        # default = Role.query.filter_by(name="default").one()
+        default = Role.query.filter_by(name="default").first()
+        self.roles.append(default)
 
     def __repr__(self):
         """Define the string format for instance of User."""
@@ -36,9 +55,41 @@ class User(db.Model):
     def check_password(self, password):
         return bcrypt.check_password_hash(self.password, password)
 
-posts_tags = db.Table('posts_tags',
-                      db.Column('post_id', db.String(45), db.ForeignKey('posts.id')),
-                      db.Column('tag_id', db.String(45), db.ForeignKey('tags.id')))
+    def is_authenticated(self):
+        if isinstance(self, AnonymousUserMixin):
+            return False
+        else:
+            return True
+
+    def is_active():
+        return True
+
+    def is_anonymous(self):
+        if isinstance(self, AnonymousUserMixin):
+            return True
+        else:
+            return False
+
+    def get_id(self):
+        return unicode(self.id)
+
+class Role(db.Model):
+    __tablename__ = 'roles'
+
+    id = db.Column(db.String(45), primary_key=True)
+    name = db.Column(db.String(255), unique=True)
+    description = db.Column(db.String(255))
+
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+    def __repr__(self):
+        return "<Model Role '{}'>".format(self.name)
+
+
+
+
 
 class Post(db.Model):
     __tablename__ = 'posts'

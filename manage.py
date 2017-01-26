@@ -11,7 +11,7 @@ app = create_app('jmilkfansblog.config.%sConfig' % env.capitalize())
 manager = Manager(app)
 migrate = Migrate(app, models.db)
 
-manager.add_command("runserver", Server())
+manager.add_command("runserver", Server(host='0.0.0.0', port=8089))
 manager.add_command("db", MigrateCommand)
 
 
@@ -23,6 +23,7 @@ def make_shell_context():
                 Post=models.Post,
                 Comment=models.Comment,
                 Tag=models.Tag,
+                Role=models.Role,
                 Server=Server)
 
 

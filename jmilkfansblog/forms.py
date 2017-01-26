@@ -23,6 +23,7 @@ class CommentForm(Form):
 class LoginForm(Form):
     username = StringField('Username', [DataRequired(), Length(max=255)])
     password = PasswordField('Password', [DataRequired()])
+    remember = BooleanField("Remember Me")
 
     def validate(self):
         check_validata = super(LoginForm, self).validate()

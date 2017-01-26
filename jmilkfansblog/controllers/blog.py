@@ -1,12 +1,14 @@
 import datetime
 from os import path
 from uuid import uuid4
-from flask import  render_template, Blueprint, redirect, url_for, flash
-
+from flask import  render_template, Blueprint, redirect, url_for, flash, session, abort
+from flask_login import login_required, current_user
+from flask_principal import Permission, UserNeed
 from sqlalchemy import func
 
 from jmilkfansblog.models import db, User, Post, Tag, Comment, posts_tags
 from jmilkfansblog.forms import CommentForm, PostForm
+from jmilkfansblog.extensions import poster_permission, admin_permission
 
 blog_blueprint = Blueprint(
     'blog',
@@ -99,15 +101,20 @@ def user(username):
                            top_tags=top_tags)
 
 @blog_blueprint.route('/new', methods=['GET', 'POST'])
+@login_required
 def new_post():
     form = PostForm()
     # print("form tttttttttttt", form.title)
+    if not current_user:
+        return redirect(url_for('main.login'))
+
     if form.validate_on_submit():
         # print("new form on submit ssssssssssssssss")
 
         new_post = Post(id=str(uuid4()), title=form.title.data)
         new_post.text = form.text.data
         new_post.publish_date = datetime.datetime.now()
+        new_post.users = current_user
 
         db.session.add(new_post)
         db.session.commit()
@@ -115,24 +122,50 @@ def new_post():
     return render_template('new_post.html', form=form)
 
 @blog_blueprint.route('/edit/<string:id>', methods=['GET', 'POST'])
+@login_required
+@poster_permission.require(http_exception=403)
 def edit_post(id):
     post = Post.query.get_or_404(id)
-    form = PostForm()
 
-    if form.validate_on_submit():
-        # print("edit form on submit ssssssssssssssss eeeeeeeeeeee")
-        post.title = form.title.data
-        post.text = form.text.data
-        post.publish_date = datetime.datetime.now()
+    if not current_user:
+        return redirect(url_for('main.login'))
 
-        db.session.add(post)
-        db.session.commit()
+    # Only the post owner can be edit this post
+    if current_user != post.users:
 
-        return redirect(url_for('blog.post', post_id=post.id))
+        return redirect(url_for('blog.post', post_id=id))
+
+    # Admin can be edit the post
+    permission = Permission(UserNeed(post.users.id))
+
+    if permission.can() or admin_permission.can():
+        form = PostForm()
+
+        if form.validate_on_submit():
+
+            post.title = form.title.data
+            post.text = form.text.data
+            post.publish_date = datetime.datetime.now()
+
+            db.session.add(post)
+            db.session.commit()
+
+            return redirect(url_for('blog.post', post_id=post.id))
+    else:
+        abort(403)
 
     form.title.data = post.title
     form.text.data = post.text
+
     return render_template('edit_post.html', form=form, post=post)
+
+def check_user():
+
+    if 'username' in session:
+        g.current_user = User.query(User).filter_by(
+            user=session['username']).first()
+    else:
+        g.current_user = None
 
 @blog_blueprint.errorhandler(404)
 def page_not_found(error):

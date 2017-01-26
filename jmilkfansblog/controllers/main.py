@@ -1,7 +1,10 @@
 from os import path
 from uuid import uuid4
 
-from flask import flash, url_for, redirect, render_template, Blueprint
+from flask import flash, url_for, redirect, render_template, Blueprint, request, session
+from flask_login import login_user, logout_user
+from flask_principal import Identity, AnonymousIdentity, identity_changed, current_app
+
 from jmilkfansblog.forms import LoginForm, RegisterForm
 
 from jmilkfansblog.models import db, User
@@ -24,6 +27,17 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
+
+        user = User.query.filter_by(username=form.username.data).one()
+        # login_user will write user obj to session
+        login_user(user, remember=form.remember.data)
+
+        identity_changed.send(
+            current_app._get_current_object(),
+            identity = Identity(user.id)
+        )
+
+
         flash("You have been logged in.", category="success")
         return redirect(url_for("blog.home"))
 
@@ -32,8 +46,17 @@ def login():
 @main_blueprint.route('/logout', methods=['GET', 'POST'])
 def logout():
     """View function for logout."""
+
+    # Using the Flask-Login to processing and check the logout status for user.
+    logout_user()
+
+    identity_changed.send(
+        current_app._get_current_object(),
+        identity = AnonymousIdentity()
+    )
+
     flash("You have been logged out.", category="success")
-    return redirect(url_for('blog.home'))
+    return redirect(url_for('main.login'))
 
 @main_blueprint.route('/register', methods=['GET', 'POST'])
 def register():
