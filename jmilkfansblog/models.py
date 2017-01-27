@@ -3,6 +3,10 @@ from flask_login import AnonymousUserMixin
 # from jmilkfansblog import app
 from uuid import uuid4
 from jmilkfansblog.extensions import bcrypt
+import sys
+
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 db = SQLAlchemy()
 
@@ -25,8 +29,9 @@ class User(db.Model):
     # Establish contact with Post's ForeignKey: user_id
     posts = db.relationship(
         'Post',
-        backref='users',
-        lazy='dynamic'
+        # backref='user',
+        # lazy='dynamic'
+        back_populates='user'
     )
 
     roles = db.relationship(
@@ -34,8 +39,8 @@ class User(db.Model):
         secondary = users_roles,
         backref = db.backref('users', lazy='dynamic'))
 
-    def __init__(self, id, username, password):
-        self.id = id
+    def __init__(self, username, password):
+        self.id = str(uuid4())
         self.username = username
         self.password = self.set_password(password)
 
@@ -98,6 +103,13 @@ class Post(db.Model):
     publish_date = db.Column(db.DateTime)
     # Set the foreigin key for Post
     user_id = db.Column(db.String(45), db.ForeignKey('users.id'))
+
+    # one to many: user <==> posts
+    user = db.relationship(
+        'User',
+        back_populates='posts'
+    )
+
     # Establish contact with Comment's ForeignKey: post_id
     comments = db.relationship(
         'Comment',
@@ -112,8 +124,8 @@ class Post(db.Model):
         backref=db.backref('posts', lazy='dynamic')
     )
 
-    def __init__(self, id, title):
-        self.id = id
+    def __init__(self, title):
+        self.id = str(uuid4())
         self.title = title
 
     def __repr__(self):

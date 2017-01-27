@@ -65,7 +65,7 @@ def register():
     form = RegisterForm()
 
     if form.validate_on_submit():
-        new_user = User(id=str(uuid4()),
+        new_user = User(
                         username=form.username.data,
                         password=form.password.data)
 

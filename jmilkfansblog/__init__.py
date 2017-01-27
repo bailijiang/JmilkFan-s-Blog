@@ -3,11 +3,12 @@ import os
 # from config import DevConfig
 from jmilkfansblog.controllers import blog, main
 from jmilkfansblog.models import db, User, Post, Role, Tag, BrowseVolume, Reminder
-from jmilkfansblog.extensions import bcrypt, login_manager, principals, flask_admin
+from jmilkfansblog.extensions import bcrypt, login_manager, principals, flask_admin, restful_api
 
 from flask_login import current_user
 from flask_principal import identity_loaded, UserNeed, RoleNeed
 from jmilkfansblog.controllers.admin import CustomView, CustomModelView, PostView, CustomFileAdmin
+from jmilkfansblog.controllers.flask_restful.posts import PostApi
 
 def create_app(object_name):
 
@@ -24,6 +25,16 @@ def create_app(object_name):
     principals.init_app(app)
 
     # cache.init_app(app)
+
+    #### Init the Flask-Restful via app object
+    # Define the route of restful_api
+    restful_api.add_resource(
+        PostApi,
+        '/api/posts',
+        '/api/posts/<string:post_id>',
+        endpoint='restful_api_post'
+    )
+    restful_api.init_app(app)
 
     flask_admin.init_app(app)
     # Register view Function 'CustomView' into Flask-Admin
