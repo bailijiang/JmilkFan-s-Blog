@@ -4,7 +4,6 @@ from flask_login import AnonymousUserMixin
 from uuid import uuid4
 from jmilkfansblog.extensions import bcrypt
 
-
 db = SQLAlchemy()
 
 posts_tags = db.Table('posts_tags',
@@ -41,8 +40,8 @@ class User(db.Model):
         self.password = self.set_password(password)
 
         # Setup the default-role for user.
-        # default = Role.query.filter_by(name="default").one()
-        default = Role.query.filter_by(name="default").first()
+        default = Role.query.filter_by(name="default").one()
+        # default = Role.query.filter_by(name="default").first()
         self.roles.append(default)
 
     def __repr__(self):
@@ -145,3 +144,37 @@ class Comment(db.Model):
 
     def __repr__(self):
         return '<Model Comment {} >'.format(self.name)
+
+class BrowseVolume(db.Model):
+    """Represents Proected browse_volumes."""
+
+    __tablename__ = 'browse_volumes'
+    id = db.Column(db.String(45), primary_key=True)
+    home_view_total = db.Column(db.Integer)
+
+    def __init__(self):
+        self.id = str(uuid4())
+        self.home_view_total = 0
+
+
+    def __repr__(self):
+        return '<Model BrowseVolume `{}`>'.format(self.home_view_total)
+
+    def add_one(self):
+        self.home_view_total += 1
+
+
+class Reminder(db.Model):
+    """Represents Proected reminders."""
+
+    __tablename__ = 'reminders'
+    id = db.Column(db.String(45), primary_key=True)
+    date = db.Column(db.DateTime())
+    email = db.Column(db.String(255))
+    text = db.Column(db.Text())
+
+    def __init__(self):
+        self.id = str(uuid4())
+
+    def __repr__(self):
+        return '<Model Reminder `{}`>'.format(self.text[:20])

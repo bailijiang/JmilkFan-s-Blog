@@ -2,11 +2,12 @@ from flask import Flask, redirect, url_for
 
 # from config import DevConfig
 from jmilkfansblog.controllers import blog, main
-from jmilkfansblog.models import db
-from jmilkfansblog.extensions import bcrypt, login_manager, principals
+from jmilkfansblog.models import db, User, Post, Role, Tag, BrowseVolume, Reminder
+from jmilkfansblog.extensions import bcrypt, login_manager, principals, flask_admin
 
 from flask_login import current_user
 from flask_principal import identity_loaded, UserNeed, RoleNeed
+from jmilkfansblog.controllers.admin import CustomView, CustomModelView
 
 def create_app(object_name):
 
@@ -21,6 +22,18 @@ def create_app(object_name):
     login_manager.init_app(app)
     # Init the Flask-Prinicpal via app object
     principals.init_app(app)
+
+    # cache.init_app(app)
+
+    flask_admin.init_app(app)
+    # Register view Function 'CustomView' into Flask-Admin
+    flask_admin.add_view(CustomView(name='Custom'))
+    # Register view function 'CustomModelView' into Flask-Admin
+    models = [Role, Tag, Reminder, BrowseVolume, Post, User]
+    for model in models:
+        flask_admin.add_view(
+            CustomModelView(model, db.session, category='Models')
+        )
 
     # @app.route('/')
     # def index():
