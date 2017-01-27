@@ -1,5 +1,7 @@
 from flask_wtf import Form, RecaptchaField, FlaskForm
-from wtforms import (StringField,
+from wtforms import (
+                     widgets,
+                     StringField,
                      TextField,
                      TextAreaField,
                      PasswordField,
@@ -72,3 +74,16 @@ def custom_email(form_object, field_object):
 
     if not re.match(r"[^@+@[^@]+\.[^@]]+", field_object.data):
         raise ValidationError('Field must be a valid email address.')
+
+
+class CKTextAreaWidget(widgets.TextArea):
+    """CKeditor from for Flask-Admin."""
+    def __call__(self, field, **kwargs):
+        # Add a new class property ckeditor: '<input class=ckeditor...>'
+        kwargs.setdefault('class_', 'ckeditor')
+        return super(CKTextAreaWidget, self).__call__(field, **kwargs)
+
+
+class CKTextAreaField(TextAreaField):
+    # Add a new widget 'CKTextAreaField' inherit from TextAreaField.
+    widget = CKTextAreaWidget()

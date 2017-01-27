@@ -84,7 +84,7 @@ class Role(db.Model):
         self.name = name
 
     def __repr__(self):
-        return "<Model Role '{}'>".format(self.name)
+        return "<Model Role `{}`>".format(self.name)
 
 
 
@@ -117,7 +117,7 @@ class Post(db.Model):
         self.title = title
 
     def __repr__(self):
-        return "<Model Post '{}'>".format(self.title)
+        return "<Model Post `{}`>".format(self.title)
 
 class Tag(db.Model):
     __tablename__ = 'tags'
@@ -129,7 +129,7 @@ class Tag(db.Model):
         self.name = name
 
     def __repr__(self):
-        return '<Model Tag {}>'.format(self.name)
+        return '<Model Tag `{}`>'.format(self.name)
 
 class Comment(db.Model):
     __tablename__ = 'comments'
@@ -143,7 +143,7 @@ class Comment(db.Model):
         self.id = str(uuid4())
 
     def __repr__(self):
-        return '<Model Comment {} >'.format(self.name)
+        return '<Model Comment `{}` >'.format(self.name)
 
 class BrowseVolume(db.Model):
     """Represents Proected browse_volumes."""

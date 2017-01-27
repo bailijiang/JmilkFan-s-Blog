@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for
-
+import os
 # from config import DevConfig
 from jmilkfansblog.controllers import blog, main
 from jmilkfansblog.models import db, User, Post, Role, Tag, BrowseVolume, Reminder
@@ -7,7 +7,7 @@ from jmilkfansblog.extensions import bcrypt, login_manager, principals, flask_ad
 
 from flask_login import current_user
 from flask_principal import identity_loaded, UserNeed, RoleNeed
-from jmilkfansblog.controllers.admin import CustomView, CustomModelView
+from jmilkfansblog.controllers.admin import CustomView, CustomModelView, PostView, CustomFileAdmin
 
 def create_app(object_name):
 
@@ -29,11 +29,23 @@ def create_app(object_name):
     # Register view Function 'CustomView' into Flask-Admin
     flask_admin.add_view(CustomView(name='Custom'))
     # Register view function 'CustomModelView' into Flask-Admin
-    models = [Role, Tag, Reminder, BrowseVolume, Post, User]
+    models = [Role, Tag, Reminder, BrowseVolume, User]
     for model in models:
         flask_admin.add_view(
             CustomModelView(model, db.session, category='Models')
         )
+    # Register view function 'PostView' into Flask-Admin
+    flask_admin.add_view(
+        PostView(Post, db.session, category='PostManager')
+    )
+    # Register and define path of File System for Flask-Admin
+    flask_admin.add_view(
+        CustomFileAdmin(
+            os.path.join(os.path.dirname(__file__), 'static'),
+            '/static',
+            name='Static Files'
+        )
+    )
 
     # @app.route('/')
     # def index():
