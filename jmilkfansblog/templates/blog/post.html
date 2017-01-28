@@ -9,7 +9,7 @@
     {{ post.text }}
   <div class="row">
     <div class="col-lg-6">
-        <p>Written By <a href="{{ url_for('blog.user', username=post.users.username) }}">{{ post.users.username }}</a>
+        <p>Written By <a href="{{ url_for('blog.user', username=post.user.username) }}">{{ post.user.username }}</a>
             on {{ post.publish_date }}</p>
         <p>{{ post.text | safe }}</p>
     </div>

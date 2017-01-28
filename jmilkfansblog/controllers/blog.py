@@ -132,12 +132,12 @@ def edit_post(id):
         return redirect(url_for('main.login'))
 
     # Only the post owner can be edit this post
-    if current_user != post.users:
+    if current_user != post.user:
 
         return redirect(url_for('blog.post', post_id=id))
 
     # Admin can be edit the post
-    permission = Permission(UserNeed(post.users.id))
+    permission = Permission(UserNeed(post.user.id))
 
     if permission.can() or admin_permission.can():
         form = PostForm()
