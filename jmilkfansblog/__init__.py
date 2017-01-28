@@ -9,6 +9,7 @@ from flask_login import current_user
 from flask_principal import identity_loaded, UserNeed, RoleNeed
 from jmilkfansblog.controllers.admin import CustomView, CustomModelView, PostView, CustomFileAdmin
 from jmilkfansblog.controllers.flask_restful.posts import PostApi
+from jmilkfansblog.controllers.flask_restful.auth import AuthApi
 
 def create_app(object_name):
 
@@ -33,6 +34,11 @@ def create_app(object_name):
         '/api/posts',
         '/api/posts/<string:post_id>',
         endpoint='restful_api_post'
+    )
+    restful_api.add_resource(
+        AuthApi,
+        '/api/auth',
+        endpoint='restful_api_auth'
     )
     restful_api.init_app(app)
 

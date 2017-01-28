@@ -111,7 +111,8 @@ def new_post():
     if form.validate_on_submit():
         # print("new form on submit ssssssssssssssss")
 
-        new_post = Post(title=form.title.data)
+        new_post = Post()
+        new_post.title = form.title.data
         new_post.text = form.text.data
         new_post.publish_date = datetime.datetime.now()
         new_post.users = current_user

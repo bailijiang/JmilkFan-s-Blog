@@ -11,11 +11,11 @@ nested_tag_fields = {
 }
 
 # String format output of tag
-print("before post_fields")
 post_fields = {
     # x == object of post
     'id': fields.String(),
-    'author': fields.String(attribute=str(lambda x: x.user.username)),
+    # 'author': fields.String(attribute=str(lambda x: x.user.username)),
+    'author': fields.String(attribute=lambda x: x.user.username),
     'title': fields.String(),
     'text': jf_fields.HTMLField(),
     'tags': fields.List(fields.Nested(nested_tag_fields)),

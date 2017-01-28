@@ -4,6 +4,11 @@ from flask_login import AnonymousUserMixin
 from uuid import uuid4
 from jmilkfansblog.extensions import bcrypt
 import sys
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous import BadSignature, SignatureExpired
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import AnonymousUserMixin
+from flask_principal import current_app
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -77,6 +82,25 @@ class User(db.Model):
     def get_id(self):
         return unicode(self.id)
 
+    """Represents Proected users."""
+    @staticmethod
+    def verify_auth_token(token):
+        """Validate the token whether is night."""
+        serializer = Serializer(
+            current_app.config['SECRET_KEY']
+        )
+        try:
+            # serializer object already has tokens in itself and wait for
+            # compare with token from HTTP Request /api/posts Methods 'POST'.
+            data = serializer.loads(token)
+        except SignatureExpired:
+            return None
+        except BadSignature:
+            return None
+
+        user = User.query.filter_by(id=data['id']).first()
+        return user
+
 class Role(db.Model):
     __tablename__ = 'roles'
 
@@ -124,9 +148,9 @@ class Post(db.Model):
         backref=db.backref('posts', lazy='dynamic')
     )
 
-    def __init__(self, title):
+    def __init__(self):
         self.id = str(uuid4())
-        self.title = title
+        # self.title = title
 
     def __repr__(self):
         return "<Model Post `{}`>".format(self.title)
